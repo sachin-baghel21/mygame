@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Bar Animation</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-image: linear-gradient(black 30%, cyan, teal, black);
+    }
+
+    .progress-bar {
+      height: 40px;
+      border-radius: 12px;
+      border: 3px solid brown;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.1);
+      position: relative;
+      box-shadow: 2px 5px 10px black;
+    }
+
+    .progress {
+      height: 100%;
+      width: 0%;
+      background-image: linear-gradient(65deg, teal, gold, greenyellow);
+      transition: width 0.1s linear;
+    }
+
+    .percent {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+
+    /* Rotate warning message for unsupported portrait */
+    #rotateMessage {
+      display: none;
+    }
+
+    @media (orientation: portrait) {
+      #rotateMessage {
+        display: flex;
+        position: fixed;
+        inset: 0;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        z-index: 9999;
+      }
+    }
+  </style>
+</head>
+
+<body class="flex flex-col justify-center items-center min-h-screen">
+
+  <!-- Rotate message -->
+  <div id="rotateMessage">🔄 Please rotate your device to landscape mode</div>
+
+  <!-- Loading text -->
+  <h3 id="text" class="text-3xl md:text-5xl font-bold text-white mb-8 drop-shadow-lg">Loading...</h3>
+
+  <!-- Progress bar container -->
+  <div class="w-11/12 max-w-2xl progress-bar">
+    <div class="progress"></div>
+    <div class="percent">0%</div>
+  </div>
+
+  <script>
+    // Smooth progress bar
+    const progress = document.querySelector('.progress');
+    const percent = document.querySelector('.percent');
+    const text = document.getElementById('text');
+
+    let count = 0;
+
+    const interval = setInterval(() => {
+      count++;
+      progress.style.width = count + '%';
+      percent.textContent = count + '%';
+
+      if (count >= 100) {
+        clearInterval(interval);
+        text.textContent = "Completed!";
+        text.style.color = "greenyellow";
+        text.style.textShadow = "0 5px 7px black";
+
+        // Redirect after short delay
+        setTimeout(() => {
+          window.location.href = 'testhome.html';
+        }, 500);
+      }
+    }, 40); // ~4 seconds total
+
+    // ✅ Auto-rotate on mobile devices only
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock("landscape").catch(() => {
+          console.log("Orientation lock not supported on this device.");
+        });
+      }
+    }
+
+    // Optional: show rotate warning message for portrait
+    function checkOrientation() {
+      const msg = document.getElementById('rotateMessage');
+      if (window.innerHeight > window.innerWidth) {
+        msg.style.display = 'flex';
+      } else {
+        msg.style.display = 'none';
+      }
+    }
+
+    window.addEventListener('resize', checkOrientation);
+    window.addEventListener('load', checkOrientation);
+  </script>
+
+</body>
+
+</html>
