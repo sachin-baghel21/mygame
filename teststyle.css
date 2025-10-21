@@ -145,7 +145,7 @@
 
  #duck1 {
  	animation: duckfly1 15s ease-in 2s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	background-size: cover;
  	border: none;
  	width: 100px;
@@ -185,7 +185,7 @@
  }
 
  #duck2 {
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	background-size: cover;
  	border: none;
  	height: 100px;
@@ -227,7 +227,7 @@
 
  #duck3 {
  	animation: duckfly3 18s ease-in 5s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	background-size: cover;
  	border: none;
  	width: 100px;
@@ -268,7 +268,7 @@
 
  #duck4 {
  	animation: duckfly4 20s ease-out 13s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	background-size: cover;
  	border: none;
  	width: 100px;
@@ -308,7 +308,7 @@
 
  #duck5 {
  	animation: duckfly5 10s linear 16s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	border: none;
  	background-size: cover;
  	width: 100px;
@@ -349,7 +349,7 @@
 
  #duck6 {
  	animation: duckfly6 20s normal 20s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	background-size: cover;
  	border: none;
  	width: 100px;
@@ -390,7 +390,7 @@
 
  #duck7 {
  	animation: duckfly7 10s linear 25s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	background-size: cover;
  	border: none;
  	width: 100px;
@@ -431,7 +431,7 @@
 
  #duck8 {
  	animation: duckfly8 10s linear 15s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	background-size: cover;
  	border: none;
  	width: 100px;
@@ -472,7 +472,7 @@
 
  #duck9 {
  	animation: duckfly9 14s linear 15s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	background-size: cover;
  	border: none;
  	width: 100px;
@@ -513,7 +513,7 @@
 
  #duck10 {
  	animation: duckfly10 15s linear 10s infinite;
- 	background: url(/Bird1.png);
+ 	background: url(Bird1.png);
  	width: 100px;
  	height: 100px;
  	background-size: cover;
@@ -557,7 +557,7 @@
  /* egle start here */
  #duck11 {
  	animation: duckfly11 17s ease-in 15s infinite;
- 	background: url(/egle.png);
+ 	background: url(egle.png);
  	width: 100px;
  	height: 100px;
  	background-size: cover;
@@ -604,7 +604,7 @@
 
  	border-radius: 50px;
  	animation: duckfly12 20s linear 10s infinite;
- 	background: url(/egle.png);
+ 	background: url(egle.png);
  	width: 100px;
  	height: 100px;
  	background-size: cover;
@@ -646,7 +646,7 @@
 
  #duck13 {
  	animation: duckfly13 15s ease-out 15s infinite;
- 	background: url(/egle.png);
+ 	background: url(egle.png);
  	width: 100px;
  	height: 100px;
  	background-size: cover;
@@ -688,7 +688,7 @@
 
  #duck14 {
  	animation: duckfly14 18s ease-out 16s infinite;
- 	background: url(/egle.png);
+ 	background: url(egle.png);
  	border-radius: 50px;
  	width: 100px;
  	height: 100px;
@@ -731,7 +731,7 @@
 
  #duck15 {
  	animation: duckfly15 13s ease-in 20s infinite;
- 	background: url(/egle.png);
+ 	background: url(egle.png);
  	border-radius: 50px;
  	width: 100px;
  	height: 100px;
@@ -1004,3 +1004,4 @@
 	width: 100%;
 
  }
+
